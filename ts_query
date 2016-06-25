@@ -1,0 +1,14 @@
+  ./examples/chaincode/go/artfun/ts_invoke
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetWorker", "Args": ["100"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetWorker", "Args": ["200"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetWorker", "Args": ["101"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetAssignment", "Args": ["101", "200"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetWorkerListAtClient", "Args": ["200"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetTSForMonthByDateAndWorker", "Args": ["201605", "100"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetTSForMonthByWorker", "Args": ["201605"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetTimeSheetForMonth", "Args": ["201605"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetTimeSheet", "Args": ["201605","101","200"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetTSByDate", "Args": ["201605","100","101","20160523"]}'
+  ./peer chaincode invoke -l golang -n myobc -c '{"Function": "CalculateMonthlyBill", "Args": ["201605", "BILL", "102"]}'
+  ./peer chaincode query -l golang -n myobc -c '{"Function": "GetBillForMonth", "Args": ["201605"]}'
+

@@ -17,14 +17,34 @@ This application deals with Workforce and timesheet management on the block chai
 * Resources such as Freelance Consultants, Office operators such as Regis etc.
 ![The Timesheet Blockchain](ts_pic1.jpg)
 
-The Blockchain registers all the stakeholders after validating them against a "IDaaS" chain. Vendors seek Clients and assign employees or Resources to work on them i.e. Assignments or Projects. They agree to a certain bill rate, travel and lodging expenses and paid time-offs. 
+The Blockchain registers all the **stakeholders** after validating them against a "IDaaS" chain. **Vendors** seek **Clients** and **assign** employees or **Resources** to work on them i.e. Assignments or Projects. They agree to a certain bill rate, travel and lodging expenses and paid time-offs. 
 
-As resources work on projects, they enter their time which is recorded on Blockchain. The distributed trust mechanism ensures that stakeholders agree to the work performed and the time charged. Now at the end of the month Billing Calculations can be made. Vendors would initiate calculations to produce the monthly bill for each cleint for each worker. Similarly, clients can initiate billing to show how different resources from mulriple vendors charged to the project or assignment.
+As resources work on projects, they enter their **time** which is recorded on Blockchain. The distributed trust mechanism ensures that stakeholders agree to the work performed and the time charged. At the end of each month, **Billing Calculations** can be made. Vendors would initiate calculations to produce the monthly bill for each cleint for each worker. Similarly, clients can initiate billing to show how different resources from mulriple vendors charged to the project or assignment. In this sample application, a Worker can work on many projects within or across clients.
 
 The typical business process is shown below
 ![Business Process](SNAG-005.jpg)
 
 ## Chain Code APIs
+**Invoke Functions**
+
+                PostWorker
+                AssignWorker
+                PostTime
+                CalculateMonthlyBill
+
+**Query Functions**
+
+
+                GetWorker
+                GetAssignment
+                GetTSForDay
+                GetWorkerListAtClient
+                GetTSForMonthByDateAndWorker
+                GetTSForMonthByWorker
+                GetTimeSheet
+                GetTimeSheetForMonth
+                GetTSByDate
+                GetBillForMonth
 ## Environment
 
 Please review instructions on setting up the [Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devnet-setup.md) as well as the setting up the [Sandbox Environment](https://github.com/hyperledger/fabric/blob/master/docs/API/SandboxSetup.md) to execute the chaincode.

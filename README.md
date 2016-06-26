@@ -53,5 +53,24 @@ Please review instructions on setting up the [Development Environment](https://g
  * cd $GOPATH/src/github.com/hyperledger/fabric
  * git clone https://github.com/<user-name>/timesheet.git
 
-## Running the Chaincode
+## Running the ChaincodeTerminal 1
+
+    $ cd $GOPATH/src/github.com/hyperledger/fabric/peer
+    $ go build
+    $ ./peer peer --peer-chaincodedev
+
+Terminal 2
+
+    $ cd $GOPATH/src/github.com/hyperledger/fabric
+    $ cd ./examples/chaincode/go/ts_obc
+    $ go build ts_obc.go
+    $ CORE_CHAINCODE_ID_NAME=mycc CORE_PEER_ADDRESS=0.0.0.0:30303 ./ts_obc
+
+Terminal 3
+
+    $ cd $GOPATH/src/github.com/hyperledger/fabric/peer
+    $ ../examples/chaincode/go/ts_obc/ts_invoke
+    $ ../examples/chaincode/go/ts_obc/ts_query
+
+
 ## Open Issues
